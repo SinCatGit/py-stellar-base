@@ -63,6 +63,7 @@ class Address(object):
         self.flags = None
         self.signers = None
         self.data = None
+        self.subentry_count = None
 
     def get(self):
         """Retrieve the account data that corresponds to this :class:`Address`.
@@ -95,6 +96,7 @@ class Address(object):
                 self.flags = acc.get('flags')
                 self.signers = acc.get('signers')
                 self.data = acc.get('data')
+                self.subentry_count = acc.get('subentry_count')
             elif acc.get('status') == 404:
                 raise AccountNotExistError(acc.get('title'))
             else:
