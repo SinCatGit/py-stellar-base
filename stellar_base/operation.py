@@ -106,7 +106,9 @@ class Operation(object):
             serialization.
 
         """
-        if not isinstance(value, str):
+	if not (isinstance(value, str) or isinstance(value, unicode)):
+
+        # if not isinstance(value, str):
             # FIXME: Raise better exception
             raise Exception("value must be a string")
 

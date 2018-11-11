@@ -137,7 +137,7 @@ def calculate_checksum(payload):
     # This code calculates CRC16-XModem checksum of payload
     checksum = crc16.crc16xmodem(payload)
     # Ensure that the checksum is in LSB order.
-    checksum = struct.pack('<H', checksum)
+    checksum = struct.pack(str('<H'), checksum)
     return checksum
 
 
