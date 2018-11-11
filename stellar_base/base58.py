@@ -1,4 +1,9 @@
 # coding: utf-8
+from __future__ import unicode_literals
+import sys
+reload(sys)
+sys.setdefaultencoding('utf-8')
+
 '''Base58 encoding
 
 Implementations of Base58 and Base58Check endcodings that are compatible
