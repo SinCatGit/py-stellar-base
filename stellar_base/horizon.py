@@ -26,7 +26,7 @@ HORIZON_TEST = "https://horizon-testnet.stellar.org"
 
 
 class Horizon(object):
-    def __init__(self, horizon=None, sse=False, timeout=20):
+    def __init__(self, horizon=None, sse=False, timeout=60):
         """The :class:`Horizon` object, which represents the interface for
         making requests to a Horizon server instance.
 
